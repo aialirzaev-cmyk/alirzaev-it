@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">alirzaev-it</title>
+  <defs>
+    <linearGradient id="aFill" x1="34" y1="18" x2="124" y2="132" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F4F7FA"/>
+      <stop offset=".42" stop-color="#A8B1C0"/>
+      <stop offset="1" stop-color="#4A5262"/>
+    </linearGradient>
+    <linearGradient id="aShade" x1="53" y1="65" x2="103" y2="127" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8B95A6" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#1A1D25" stop-opacity=".85"/>
+    </linearGradient>
+    <linearGradient id="orbit" x1="17" y1="107" x2="139" y2="57" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#21E6A3"/>
+      <stop offset=".5" stop-color="#0ED3B5"/>
+      <stop offset="1" stop-color="#08BFC5"/>
+    </linearGradient>
+    <radialGradient id="apexLight" cx="0" cy="0" r="1" gradientTransform="translate(80 28) rotate(90) scale(94 58)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity=".24"/>
+      <stop offset=".62" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+  </defs>
+
+  <g opacity=".36" filter="url(#softGlow)">
+    <ellipse cx="80" cy="83" rx="67" ry="23" transform="rotate(-20 80 83)" fill="none" stroke="#21E6A3" stroke-width="7"/>
+  </g>
+
+  <path d="M65 19h30l44 108h-31L80 65l-12 27 9 21H46L65 19Z" fill="url(#aFill)"/>
+  <path d="M80 65 68 92l9 21H46L65 19h15v46Z" fill="url(#aShade)" opacity=".72"/>
+  <path d="M65 19h30l44 108h-31L80 65l-12 27 9 21H46L65 19Z" fill="url(#apexLight)"/>
+
+  <ellipse cx="80" cy="83" rx="67" ry="23" transform="rotate(-20 80 83)" fill="none" stroke="url(#orbit)" stroke-width="5.5" stroke-linecap="round"/>
+  <circle cx="129" cy="57" r="4.5" fill="#2BEBA8"/>
+
+  <g fill="#DDF7F0">
+    <rect x="107" y="93" width="30" height="7" rx="2.4"/>
+    <rect x="107" y="104" width="7" height="7" rx="2"/>
+    <rect x="118" y="104" width="9" height="7" rx="2"/>
+    <rect x="130" y="104" width="7" height="7" rx="2"/>
+    <rect x="107" y="115" width="12" height="7" rx="2"/>
+    <rect x="123" y="115" width="7" height="7" rx="2"/>
+    <rect x="134" y="115" width="3" height="7" rx="1.2"/>
+  </g>
+  <g fill="none" stroke="#21E6A3" stroke-width="2.4" stroke-linecap="round">
+    <path d="M99 91h-4v4"/>
+    <path d="M145 91h4v4"/>
+    <path d="M99 129h-4v-4"/>
+    <path d="M145 129h4v-4"/>
+  </g>
+</svg>

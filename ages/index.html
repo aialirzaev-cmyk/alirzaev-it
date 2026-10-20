@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101116">
+  <title>alirzaev-it — цифровые решения для заведений</title>
+  <meta name="description" content="Цифровые меню, QR-меню и современные сайты для ресторанов, кафе, кофеен, баров и пекарен. Digital-студия alirzaev-it.">
+  <meta property="og:title" content="alirzaev-it — цифровые решения для вашего заведения">
+  <meta property="og:description" content="QR-меню, цифровые меню и сайты для HoReCa. Помогаем заведению выйти на новый цифровой уровень.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alirzaev-it.netlify.app/">
+  <meta property="og:site_name" content="alirzaev-it">
+  <meta property="og:image" content="https://alirzaev-it.netlify.app/assets/img/restaurant-900.webp">
+  <meta property="og:image:alt" content="alirzaev-it — digital-студия для HoReCa">
+  <link rel="canonical" href="https://alirzaev-it.netlify.app/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/unbounded-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/manrope-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.replace("no-js", "js");</script>
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body class="is-intro">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <div class="intro" id="intro" aria-label="Заставка alirzaev-it">
+    <div class="intro__grid" aria-hidden="true"></div>
+    <div class="intro__glow" aria-hidden="true"></div>
+    <div class="intro__center">
+      <div class="intro__mark">
+        <img src="assets/logo-mark.svg" alt="" width="112" height="112">
+      </div>
+      <div class="intro__name">alirzaev<span>-it</span></div>
+      <div class="intro__line"><span></span></div>
+      <div class="intro__meta">
+        <span>Digital HoReCa studio</span>
+        <span>Loading experience</span>
+      </div>
+    </div>
+    <button class="intro__skip" type="button" id="introSkip">Пропустить</button>
+  </div>
+
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container site-header__inner">
+      <a class="brand" href="#home" aria-label="alirzaev-it — на главную">
+        <span class="brand__mark">
+          <img src="assets/logo-mark.svg" alt="" width="44" height="44">
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">alirzaev<span>-it</span></span>
+          <span class="brand__tag">digital studio for HoReCa</span>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a class="nav-link is-active" href="#home"><span>Главная</span></a>
+        <a class="nav-link" href="#solutions"><span>Услуги</span></a>
+        <a class="nav-link" href="#work"><span>Проекты</span></a>
+        <a class="nav-link" href="#about"><span>О компании</span></a>
+        <a class="nav-link" href="#contacts"><span>Контакты</span></a>
+      </nav>
+
+      <div class="site-header__actions">
+        <button class="btn btn--header" type="button" data-open-order>
+          <span>Заказать проект</span>
+          <span class="btn__dot" aria-hidden="true"></span>
+        </button>
+        <button class="menu-toggle" type="button" id="menuToggle" aria-label="Открыть меню" aria-controls="mobileMenu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" id="mobileMenu" aria-hidden="true" aria-label="Мобильное меню">
+    <div class="mobile-menu__glow" aria-hidden="true"></div>
+    <div class="mobile-menu__inner">
+      <div class="mobile-menu__top">
+        <span class="micro-label">Меню</span>
+        <span class="micro-label">alirzaev-it / 2026</span>
+      </div>
+      <div class="mobile-nav">
+        <a href="#home"><span class="mobile-nav__num">01</span><span>Главная</span><span class="mobile-nav__arrow">→</span></a>
+        <a href="#solutions"><span class="mobile-nav__num">02</span><span>Услуги</span><span class="mobile-nav__arrow">→</span></a>
+        <a href="#work"><span class="mobile-nav__num">03</span><span>Проекты</span><span class="mobile-nav__arrow">→</span></a>
+        <a href="#about"><span class="mobile-nav__num">04</span><span>О студии</span><span class="mobile-nav__arrow">→</span></a>
+        <a href="#contacts"><span class="mobile-nav__num">05</span><span>Контакты</span><span class="mobile-nav__arrow">→</span></a>
+      </div>
+      <div class="mobile-menu__foot">
+        <p>Цифровые решения для ресторанов, кафе и других заведений.</p>
+        <button class="btn btn--primary btn--wide" type="button" data-open-order>Обсудить проект</button>
+        <div class="mobile-menu__meta">
+          <span>Digital HoReCa studio</span>
+          <span id="mobileMenuYear"></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="heroTitle">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__grid"></div>
+        <div class="hero__glow hero__glow--one anim-ambient"></div>
+        <div class="hero__glow hero__glow--two anim-ambient"></div>
+        <div class="hero__beam"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <div class="hero__kicker">
+            <span class="status-pill"><span class="status-pill__dot"></span>Digital HoReCa studio</span>
+            <span class="micro-label hero__year">est. 2026 / online</span>
+          </div>
+
+          <h1 class="hero__title" id="heroTitle" aria-label="Цифровые решения для вашего заведения">
+            <span class="hero-line"><span>Цифровые</span></span>
+            <span class="hero-line"><span>решения</span></span>
+            <span class="hero-line hero-line--muted"><span>для вашего</span></span>
+            <span class="hero-line hero-line--accent"><span>заведения</span></span>
+          </h1>
+
+          <p class="hero__lead">QR-меню, цифровые меню и современные сайты для ресторанов, кафе и кофеен. Помогаем вашему заведению выйти на новый цифровой уровень.</p>
+
+          <div class="hero__actions">
+            <button class="btn btn--primary btn--lg" type="button" data-open-order>
+              <span>Обсудить проект</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <a class="btn btn--ghost btn--lg" href="#solutions">
+              <span>Посмотреть решения</span>
+              <span class="btn__index">01</span>
+            </a>
+          </div>
+
+          <div class="hero__meta">
+            <div class="hero-meta__item">
+              <span class="hero-meta__label">Фокус</span>
+              <strong>HoReCa</strong>
+            </div>
+            <div class="hero-meta__item">
+              <span class="hero-meta__label">Формат</span>
+              <strong>Digital-дизайн</strong>
+            </div>
+            <div class="hero-meta__item">
+              <span class="hero-meta__label">Старт</span>
+              <strong>2–10 дней</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-stage" id="heroStage" aria-label="Демонстрация цифрового меню и QR-решения">
+          <div class="hero-stage__aura anim-ambient" aria-hidden="true"></div>
+          <div class="orbit orbit--one anim-orbit" aria-hidden="true"></div>
+          <div class="orbit orbit--two anim-orbit" aria-hidden="true"></div>
+          <div class="orbit-dots" aria-hidden="true"></div>
+
+          <div class="phone phone--hero" data-depth="0.06">
+            <div class="phone__frame">
+              <div class="phone__screen">
+                <div class="phone__status">
+                  <span>9:41</span>
+                  <span class="phone__status-icons"><i></i><i></i><i></i></span>
+                </div>
+                <div class="menu-preview">
+                  <div class="menu-preview__top">
+                    <div>
+                      <span class="menu-preview__eyebrow">olive &amp; ember · demo</span>
+                      <div class="menu-preview__title">Меню</div>
+                    </div>
+                    <span class="menu-preview__qr"><img src="assets/qr-demo.svg" alt="" width="26" height="26"></span>
+                  </div>
+                  <div class="menu-preview__hero">
+                    <img src="assets/img/salad-480.webp" alt="Салат с томатами — демонстрационное меню" width="480" height="320" fetchpriority="high" decoding="async">
+                    <div class="menu-preview__hero-overlay">
+                      <span>сезонное меню</span>
+                      <strong>Свежие акценты</strong>
+                    </div>
+                  </div>
+                  <div class="menu-preview__chips" aria-hidden="true">
+                    <span class="is-active">Всё</span><span>Завтраки</span><span>Основное</span><span>Напитки</span>
+                  </div>
+                  <div class="menu-preview__items">
+                    <div class="mini-dish">
+                      <img src="assets/img/dish-plate-480.webp" alt="" width="480" height="480" loading="eager" decoding="async">
+                      <div><strong>Стейк из мраморной говядины</strong><span>1 290 ₽</span></div>
+                    </div>
+                    <div class="mini-dish">
+                      <img src="assets/img/dessert-480.webp" alt="" width="480" height="480" loading="eager" decoding="async">
+                      <div><strong>Сырники с ягодным соусом</strong><span>390 ₽</span></div>
+                    </div>
+                    <div class="mini-dish">
+                      <img src="assets/img/bakery-480.webp" alt="" width="480" height="480" loading="eager" decoding="async">
+                      <div><strong>Круассан с миндалём</strong><span>290 ₽</span></div>
+                    </div>
+                  </div>
+                  <div class="menu-preview__bottom">
+                    <span class="menu-preview__bottom-dot"></span>
+                    <span>24 позиции в демо-меню</span>
+                    <span class="menu-preview__bottom-arrow">↗</span>
+                  </div>
+                  <div class="phone-tabbar" aria-hidden="true">
+                    <span class="is-active"><svg viewBox="0 0 24 24"><path d="m4 10 8-6 8 6v9a1 1 0 0 1-1 1h-5v-6h-4v6H5a1 1 0 0 1-1-1v-9Z"/></svg></span>
+                    <span><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="m16 16 4 4"/></svg></span>
+                    <span><svg viewBox="0 0 24 24"><path d="M4 9V5h4M16 5h4v4M20 15v4h-4M8 19H4v-4"/><path d="M9 9h6v6H9z"/></svg></span>
+                    <span><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M6 20c.4-3.6 2.4-6 6-6s5.6 2.4 6 6"/></svg></span>
+                  </div>
+                </div>
+              </div>
+              <span class="phone__notch" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <div class="float-card qr-float" data-depth="0.14">
+            <div class="qr-float__top">
+              <span>QR-меню</span>
+              <span class="demo-tag">demo</span>
+            </div>
+            <img src="assets/qr-demo.svg" alt="Демонстрационный QR-код меню" width="112" height="112">
+            <div class="qr-float__bottom">
+              <strong>Один скан</strong>
+              <span>и меню открыто</span>
+            </div>
+          </div>
+
+          <div class="float-card dish-float" data-depth="0.2">
+            <img src="assets/img/dessert-480.webp" alt="" width="480" height="480" loading="eager" decoding="async">
+            <div>
+              <span class="float-card__eyebrow">demo / menu</span>
+              <strong>Фото, которые<br>продают блюдо</strong>
+            </div>
+          </div>
+
+          <div class="hero-chip" data-depth="0.24">
+            <span class="hero-chip__pulse"></span>
+            <span>mobile-first experience</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container hero__bottom">
+        <a class="scroll-cue" href="#solutions">
+          <span class="scroll-cue__icon"><i></i></span>
+          <span>Листайте вниз</span>
+        </a>
+        <span class="hero__bottom-note">Меню · QR · Сайты · Digital HoReCa</span>
+      </div>
+    </section>
+
+    <div class="marquee" aria-label="Направления работы">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span>Рестораны</span><i></i><span>Кафе</span><i></i><span>Кофейни</span><i></i><span>Бары</span><i></i><span>Пекарни</span><i></i><span>HoReCa</span><i></i>
+        </div>
+        <div class="marquee__group" aria-hidden="true">
+          <span>Рестораны</span><i></i><span>Кафе</span><i></i><span>Кофейни</span><i></i><span>Бары</span><i></i><span>Пекарни</span><i></i><span>HoReCa</span><i></i>
+        </div>
+      </div>
+    </div>
+
+    <section class="section section--light services" id="solutions" aria-labelledby="servicesTitle">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__top reveal">
+            <span class="eyebrow"><span>01</span> Решения</span>
+            <span class="section-head__note">Digital-продукты для гостеприимства</span>
+          </div>
+          <div class="section-head__main">
+            <h2 class="section-title reveal" id="servicesTitle">Решения<br>для вашего заведения</h2>
+            <p class="section-lead reveal" style="--delay: 80ms">От цифрового меню до сайта, который передаёт атмосферу места. Выберите формат — а детали мы соберём вокруг вашей концепции.</p>
+          </div>
+        </div>
+
+        <div class="services-grid" id="servicesGrid"></div>
+
+        <div class="services-banner reveal">
+          <div class="services-banner__left">
+            <span class="services-banner__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></svg>
+            </span>
+            <div>
+              <h3>Нужно не одно решение, а целая digital-система?</h3>
+              <p>Соберём меню, сайт и QR-сценарий в единый визуальный и пользовательский опыт.</p>
+            </div>
+          </div>
+          <button class="btn btn--dark" type="button" data-open-order data-preselect="Комплексное решение">
+            <span>Обсудить комплексный проект</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark showcase" id="experience" aria-labelledby="showcaseTitle">
+      <div class="showcase__bg" aria-hidden="true">
+        <div class="showcase__grid"></div>
+        <div class="showcase__glow anim-ambient"></div>
+      </div>
+      <div class="container showcase__grid-layout">
+        <div class="showcase__copy">
+          <div class="section-head__top reveal">
+            <span class="eyebrow eyebrow--light"><span>02</span> Digital experience</span>
+            <span class="section-head__note section-head__note--light">Интерфейс, который хочется открыть</span>
+          </div>
+          <h2 class="section-title section-title--light reveal" id="showcaseTitle">Меню, которое<br>работает как<br><span class="text-gradient">витрина</span></h2>
+          <p class="section-lead section-lead--light reveal" style="--delay: 80ms">Крупные фотографии, понятные категории и цены без лишних кликов. Посмотрите демонстрационный интерфейс глазами гостя.</p>
+
+          <ul class="showcase-list reveal" style="--delay: 140ms">
+            <li><span>01</span><div><strong>Понятные категории</strong><p>Гость быстро находит нужный раздел меню.</p></div></li>
+            <li><span>02</span><div><strong>Акцент на блюдах</strong><p>Фотографии и описания помогают выбрать.</p></div></li>
+            <li><span>03</span><div><strong>Все устройства</strong><p>Меню удобно открывать со смартфона за столом.</p></div></li>
+          </ul>
+
+          <div class="showcase__actions reveal" style="--delay: 200ms">
+            <button class="btn btn--primary btn--lg" type="button" data-open-demo>
+              <span>Открыть демо-меню</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <span class="showcase__hint">Демонстрационный интерфейс<br>не является клиентским проектом.</span>
+          </div>
+        </div>
+
+        <div class="showcase__visual reveal" style="--delay: 120ms" id="showcaseVisual">
+          <div class="showcase__visual-glow anim-ambient" aria-hidden="true"></div>
+          <div class="showcase__ring" aria-hidden="true"></div>
+          <div class="showcase__ring showcase__ring--two" aria-hidden="true"></div>
+          <div class="phone phone--showcase">
+            <div class="phone__frame">
+              <div class="phone__screen phone__screen--demo" id="showcasePhone"></div>
+              <span class="phone__notch" aria-hidden="true"></span>
+            </div>
+          </div>
+          <div class="table-qr">
+            <div class="table-qr__card">
+              <span class="table-qr__brand">olive &amp; ember</span>
+              <img src="assets/qr-demo.svg" alt="Демонстрационный QR-код на столе" width="92" height="92">
+              <strong>Посмотрите меню</strong>
+              <span>Наведите камеру телефона</span>
+            </div>
+            <div class="table-qr__shadow" aria-hidden="true"></div>
+          </div>
+          <div class="showcase__tag showcase__tag--top">mobile / menu</div>
+          <div class="showcase__tag showcase__tag--bottom">demo interface</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--light portfolio" id="work" aria-labelledby="workTitle">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__top reveal">
+            <span class="eyebrow"><span>03</span> Визуальные концепты</span>
+            <span class="section-head__note">Демо-макеты — не клиентские проекты</span>
+          </div>
+          <div class="section-head__main">
+            <h2 class="section-title reveal" id="workTitle">Показываем<br>возможный результат</h2>
+            <p class="section-lead reveal" style="--delay: 80ms">Реальные проекты появятся здесь, когда будут готовы. Пока — демонстрационные концепты, которые показывают подход к дизайну и цифровому опыту.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-grid" id="portfolioGrid"></div>
+
+        <div class="portfolio-note reveal">
+          <span class="portfolio-note__icon" aria-hidden="true">i</span>
+          <p>Все карточки в разделе отмечены как «Демо-концепт». Это собственные визуальные макеты студии, а не работы, выполненные для клиентов. Список проектов редактируется в <code>config.js</code>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark about" id="about" aria-labelledby="aboutTitle">
+      <div class="about__bg" aria-hidden="true">
+        <div class="about__glow anim-ambient"></div>
+        <span class="about__ghost">HoReCa</span>
+        <div class="about__lines"></div>
+      </div>
+      <div class="container about__inner">
+        <div class="about__lead">
+          <div class="section-head__top reveal">
+            <span class="eyebrow eyebrow--light"><span>04</span> О студии</span>
+            <span class="section-head__note section-head__note--light">Дизайн + технологии + гостеприимство</span>
+          </div>
+          <h2 class="section-title section-title--light reveal" id="aboutTitle">Digital-студия с фокусом на гостеприимство</h2>
+          <p class="about__description reveal" id="aboutDescription" style="--delay: 80ms">alirzaev-it помогает заведениям общепита выглядеть современнее, представлять блюда в цифровом формате и создавать удобный опыт для посетителей.</p>
+          <div class="about__signature reveal" style="--delay: 140ms">
+            <span class="about__signature-line"></span>
+            <div>
+              <strong>alirzaev-it</strong>
+              <span>digital HoReCa studio</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__side">
+          <div class="about__statement reveal">
+            <div class="about__statement-top">
+              <span class="micro-label">Наш подход</span>
+              <span class="about__orb" aria-hidden="true"></span>
+            </div>
+            <p>Не просто «сделать меню». Создать цифровой опыт, который продолжает атмосферу заведения и помогает гостю чувствовать себя уверенно.</p>
+            <div class="about__specialization" id="aboutSpecialization"></div>
+          </div>
+
+          <div class="principles" id="aboutPrinciples"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--light advantages" aria-labelledby="advantagesTitle">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head__top reveal">
+            <span class="eyebrow"><span>05</span> Почему alirzaev-it</span>
+            <span class="section-head__note">Пять принципов внимательного digital-продукта</span>
+          </div>
+          <div class="section-head__main">
+            <h2 class="section-title reveal" id="advantagesTitle">Внимание<br>к впечатлению</h2>
+            <p class="section-lead reveal" style="--delay: 80ms">Красивый интерфейс — только начало. Мы думаем о том, как гость пользуется решением, как оно выглядит на его экране и что остаётся в памяти.</p>
+          </div>
+        </div>
+        <div class="advantages-grid" id="advantagesGrid"></div>
+      </div>
+    </section>
+
+    <section class="cta" id="contacts" aria-labelledby="ctaTitle">
+      <div class="cta__bg" aria-hidden="true">
+        <div class="cta__grid"></div>
+        <div class="cta__glow anim-ambient"></div>
+        <span class="cta__ghost">project</span>
+        <div class="cta__scanline"></div>
+      </div>
+      <div class="container cta__inner">
+        <div class="cta__kicker reveal"><span class="status-pill"><span class="status-pill__dot"></span>Открыты к новым проектам</span></div>
+        <h2 class="cta__title reveal" id="ctaTitle" style="--delay: 60ms">Давайте обсудим<br><span class="text-gradient">ваш проект</span></h2>
+        <p class="cta__lead reveal" style="--delay: 120ms">Расскажите о заведении и задаче. Соберите заявку за пять коротких шагов — и продолжим в WhatsApp.</p>
+        <div class="cta__actions reveal" style="--delay: 180ms">
+          <button class="btn btn--primary btn--xl" type="button" data-open-order>
+            <span>Давайте обсудим ваш проект</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <a class="cta__mail" href="#work">Сначала посмотреть концепты <span>↗</span></a>
+        </div>
+        <div class="cta__meta reveal" style="--delay: 220ms">
+          <span>5 шагов</span><i></i><span>Без предоплаты на этапе заявки</span><i></i><span>Ответ в WhatsApp</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="brand brand--footer" href="#home" aria-label="alirzaev-it — на главную">
+            <span class="brand__mark"><img src="assets/logo-mark.svg" alt="" width="52" height="52"></span>
+            <span class="brand__text">
+              <span class="brand__name">alirzaev<span>-it</span></span>
+              <span class="brand__tag">digital studio for HoReCa</span>
+            </span>
+          </a>
+          <p>Цифровые меню, QR-решения и сайты для заведений общепита. Соединяем дизайн, технологии и атмосферу гостеприимства.</p>
+          <div class="footer__socials" id="footerSocials"></div>
+        </div>
+
+        <div class="footer__columns">
+          <div class="footer__column">
+            <span class="footer__label">Навигация</span>
+            <a href="#home">Главная</a>
+            <a href="#solutions">Услуги</a>
+            <a href="#work">Проекты</a>
+            <a href="#about">О компании</a>
+            <a href="#contacts">Контакты</a>
+          </div>
+          <div class="footer__column">
+            <span class="footer__label">Решения</span>
+            <button type="button" data-open-order data-preselect="Цифровое меню">Цифровое меню</button>
+            <button type="button" data-open-order data-preselect="QR-меню">QR-меню</button>
+            <button type="button" data-open-order data-preselect="Сайт ресторана">Сайт ресторана</button>
+            <button type="button" data-open-order data-preselect="Landing page">Landing page</button>
+          </div>
+          <div class="footer__column footer__column--contact">
+            <span class="footer__label">Контакты</span>
+            <div id="footerContacts"></div>
+            <button class="footer__cta" type="button" data-open-order>
+              <span>Обсудить проект</span>
+              <span>↗</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© <span id="year">2026</span> alirzaev-it</span>
+        <span class="footer__bottom-center">Digital solutions for HoReCa</span>
+        <a href="#home">Наверх <span>↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal order-modal" id="orderModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close-order></div>
+    <div class="order-dialog" role="dialog" aria-modal="true" aria-labelledby="orderTitle">
+      <button class="modal-close modal-close--order" type="button" data-close-order aria-label="Закрыть форму заказа">
+        <span></span><span></span>
+      </button>
+
+      <aside class="order-aside">
+        <div class="order-aside__brand">
+          <img src="assets/logo-mark.svg" alt="" width="36" height="36">
+          <span>alirzaev<span>-it</span></span>
+        </div>
+        <div class="order-aside__intro">
+          <span class="eyebrow eyebrow--light"><span>Order</span> / 2026</span>
+          <h2 id="orderTitle">Соберём детали<br>вашего проекта</h2>
+          <p>Пять коротких шагов. В конце откроется WhatsApp с готовым сообщением.</p>
+        </div>
+
+        <ol class="order-steps" id="orderSteps">
+          <li class="is-active" data-step-label="1"><span class="order-steps__num">01</span><div><strong>Услуги</strong><small>Что создаём</small></div></li>
+          <li data-step-label="2"><span class="order-steps__num">02</span><div><strong>Сроки</strong><small>Когда нужен результат</small></div></li>
+          <li data-step-label="3"><span class="order-steps__num">03</span><div><strong>Фотографии</strong><small>Что уже есть</small></div></li>
+          <li data-step-label="4"><span class="order-steps__num">04</span><div><strong>Детали</strong><small>О проекте и вас</small></div></li>
+          <li data-step-label="5"><span class="order-steps__num">05</span><div><strong>Проверка</strong><small>Всё верно?</small></div></li>
+        </ol>
+
+        <div class="order-aside__foot">
+          <div class="order-aside__progress">
+            <span id="orderAsideProgress"></span>
+          </div>
+          <div class="order-aside__meta">
+            <span>Прогресс заявки</span>
+            <span id="orderProgressValue">20%</span>
+          </div>
+          <div class="order-aside__note">
+            <span class="status-pill__dot"></span>
+            Отправка подтверждается в WhatsApp
+          </div>
+        </div>
+      </aside>
+
+      <div class="order-content">
+        <div class="order-topbar">
+          <span class="order-step-indicator" id="orderStepIndicator">Шаг 1 из 5</span>
+          <span class="order-topbar__hint">Можно вернуться и изменить ответы</span>
+        </div>
+        <div class="order-progress" aria-hidden="true"><span id="orderProgressBar"></span></div>
+
+        <form class="order-form" id="orderForm" novalidate>
+          <div class="order-step-panels" id="orderStepPanels">
+            <section class="order-step is-active" data-step="1" aria-labelledby="step1Title">
+              <div class="order-step__head">
+                <span class="step-kicker">Шаг 01</span>
+                <h3 id="step1Title" tabindex="-1">Какой проект создаём?</h3>
+                <p>Выберите одну или несколько услуг.</p>
+              </div>
+              <div class="choice-grid choice-grid--services" id="serviceChoices"></div>
+              <div class="field field--other" id="otherServiceField" hidden>
+                <label for="otherService">Опишите задачу <span>обязательно для «Другое»</span></label>
+                <textarea id="otherService" name="otherService" rows="3" placeholder="Например: интерактивная страница специального предложения"></textarea>
+              </div>
+              <div class="field field--venue">
+                <label>Тип заведения <span>необязательно</span></label>
+                <div class="choice-chips" id="venueChoices"></div>
+                <input class="text-input" id="venueOther" name="venueOther" type="text" placeholder="Уточните тип заведения" hidden>
+              </div>
+              <p class="form-error" id="step1Error" role="alert"></p>
+            </section>
+
+            <section class="order-step" data-step="2" aria-labelledby="step2Title">
+              <div class="order-step__head">
+                <span class="step-kicker">Шаг 02</span>
+                <h3 id="step2Title" tabindex="-1">Когда нужен результат?</h3>
+                <p>Выберите один срок. Стоимость будет зависеть от выбранного варианта.</p>
+              </div>
+              <div class="choice-grid choice-grid--deadlines" id="deadlineChoices"></div>
+              <p class="form-error" id="step2Error" role="alert"></p>
+            </section>
+
+            <section class="order-step" data-step="3" aria-labelledby="step3Title">
+              <div class="order-step__head">
+                <span class="step-kicker">Шаг 03</span>
+                <h3 id="step3Title" tabindex="-1">У вас есть фотографии для проекта?</h3>
+                <p>Это поможет понять, нужна ли помощь с визуальным контентом.</p>
+              </div>
+              <div class="choice-grid choice-grid--photos">
+                <label class="choice-card choice-card--photo">
+                  <input type="radio" name="photos" value="Да, фотографии есть">
+                  <span class="choice-card__check"></span>
+                  <span class="choice-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="m5 17 4.5-4 3 2.5L16 11l3 3"/></svg>
+                  </span>
+                  <span class="choice-card__body"><strong>Да, фотографии есть</strong><small>Используем ваши материалы</small></span>
+                </label>
+                <label class="choice-card choice-card--photo">
+                  <input type="radio" name="photos" value="Нет, фотографии пока отсутствуют">
+                  <span class="choice-card__check"></span>
+                  <span class="choice-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M4 7h16v12H4z"/><path d="M8 7V5h8v2M8 12h8M8 15h5"/></svg>
+                  </span>
+                  <span class="choice-card__body"><strong>Нет, фотографий пока нет</strong><small>Обсудим варианты контента</small></span>
+                </label>
+              </div>
+              <p class="form-error" id="step3Error" role="alert"></p>
+            </section>
+
+            <section class="order-step" data-step="4" aria-labelledby="step4Title">
+              <div class="order-step__head">
+                <span class="step-kicker">Шаг 04</span>
+                <h3 id="step4Title" tabindex="-1">Добавим детали</h3>
+                <p>Все поля на этом шаге необязательны, но помогут лучше понять задачу.</p>
+              </div>
+              <div class="form-fields">
+                <div class="field">
+                  <label for="clientName">Ваше имя <span>необязательно</span></label>
+                  <input class="text-input" id="clientName" name="clientName" type="text" autocomplete="name" placeholder="Как к вам обращаться">
+                </div>
+                <div class="field">
+                  <label for="projectDetails">Дополнительное описание проекта <span>необязательно</span></label>
+                  <textarea id="projectDetails" name="projectDetails" rows="4" placeholder="Расскажите о заведении, задаче или идее"></textarea>
+                </div>
+                <div class="field">
+                  <label for="wishes">Пожелания <span>необязательно</span></label>
+                  <textarea id="wishes" name="wishes" rows="3" placeholder="Стиль, цвета, референсы, особые пожелания"></textarea>
+                </div>
+              </div>
+            </section>
+
+            <section class="order-step" data-step="5" aria-labelledby="step5Title">
+              <div class="order-step__head">
+                <span class="step-kicker">Шаг 05</span>
+                <h3 id="step5Title" tabindex="-1">Проверьте заявку</h3>
+                <p>Всё можно изменить — вернитесь на нужный шаг.</p>
+              </div>
+              <div class="order-review" id="orderReview"></div>
+              <div class="order-send-note">
+                <span class="order-send-note__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M20 11.5A8.5 8.5 0 1 1 11.5 3H20v8.5Z"/><path d="m7 12 3 3 7-7"/></svg>
+                </span>
+                <p id="orderSendNoteText">После нажатия кнопки откроется WhatsApp с готовым сообщением. Заявка не отправляется автоматически — подтвердите отправку в WhatsApp.</p>
+              </div>
+              <div class="order-config-note" id="orderConfigNote" hidden></div>
+              <p class="form-error" id="step5Error" role="alert"></p>
+            </section>
+          </div>
+
+          <div class="order-footer">
+            <button class="btn btn--ghost-dark" type="button" id="prevStep" hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+              <span>Назад</span>
+            </button>
+            <div class="order-footer__right">
+              <button class="btn btn--primary" type="button" id="nextStep">
+                <span>Далее</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+              <button class="btn btn--primary" type="submit" id="submitOrder" hidden>
+                <span>Отправить заказ в WhatsApp</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4 4 11l6 2 2 6 8-15Z"/><path d="m10 13 4-4"/></svg>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal demo-modal" id="demoMenuModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close-demo></div>
+    <div class="demo-dialog" role="dialog" aria-modal="true" aria-labelledby="demoVenueName">
+      <div class="demo-dialog__topbar">
+        <span class="demo-dialog__brand"><img src="assets/logo-mark.svg" alt="" width="24" height="24"> alirzaev-it <em>demo</em></span>
+        <button class="modal-close modal-close--demo" type="button" data-close-demo aria-label="Закрыть демо-меню"><span></span><span></span></button>
+      </div>
+      <div class="demo-dialog__scroll" id="demoScroll">
+        <div class="demo-cover">
+          <img src="assets/img/restaurant-900.webp" alt="Интерьер заведения — демонстрационное меню" width="900" height="600" id="demoCoverImage">
+          <div class="demo-cover__shade"></div>
+          <div class="demo-cover__content">
+            <span class="demo-cover__label">Демонстрационное меню · не клиентский проект</span>
+            <h2 id="demoVenueName">olive &amp; ember</h2>
+            <p>Современная кухня · демо</p>
+          </div>
+        </div>
+        <div class="demo-tabs" id="demoTabs" role="tablist" aria-label="Категории демо-меню"></div>
+        <div class="demo-menu-list" id="demoMenuList"></div>
+        <div class="demo-dialog__note">
+          <p>Это демонстрация интерфейса цифрового меню. Название, блюда и цены — примеры для показа формата.</p>
+        </div>
+      </div>
+      <div class="demo-dialog__footer">
+        <div><strong>Понравился формат?</strong><span>Сделаем меню для вашего заведения.</span></div>
+        <button class="btn btn--primary" type="button" id="demoOrderButton" data-open-order data-preselect="Цифровое меню">Хочу такое меню</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal concept-modal" id="conceptModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close-concept></div>
+    <div class="concept-dialog" role="dialog" aria-modal="true" aria-labelledby="conceptTitle">
+      <button class="modal-close modal-close--concept" type="button" data-close-concept aria-label="Закрыть концепт"><span></span><span></span></button>
+      <div class="concept-dialog__media">
+        <img src="assets/img/coffee-900.webp" alt="" width="900" height="600" id="conceptImage">
+        <span class="demo-tag demo-tag--solid">Демо-концепт</span>
+      </div>
+      <div class="concept-dialog__body">
+        <span class="eyebrow"><span id="conceptNumber">01</span> <span id="conceptCategory">Цифровое меню</span></span>
+        <h2 id="conceptTitle">Меню для кофейни</h2>
+        <p id="conceptDescription"></p>
+        <div class="concept-dialog__tags" id="conceptTags"></div>
+        <p class="concept-dialog__note">Демонстрационный макет студии. Не является проектом, выполненным для клиента.</p>
+        <button class="btn btn--dark" type="button" id="conceptOrder">Обсудить похожее решение <span>↗</span></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="noscript">Для работы формы и интерактивных демонстраций включите JavaScript.</div></noscript>
+</body>
+</html>
